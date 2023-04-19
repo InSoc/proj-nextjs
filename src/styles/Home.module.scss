@@ -67,9 +67,17 @@
     font-size: 1.9rem;
     line-height: 1.5;
     max-width: 30ch;
-    &.desc {
-      color: yellow;
-    }
+  }
+}
+
+.desc {
+  margin: 2rem 0;
+  &.colorRed {
+    color: red;
+    font-size: 2rem;
+  }
+  &.textUppercase {
+    text-transform: uppercase;
   }
 }
 

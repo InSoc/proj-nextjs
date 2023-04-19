@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import clsx from 'clsx';
 
+import Header from '~/Components/Header'
 import styles from '~/styles/Home.module.scss'
 
 // import GlobalStyles from '~/components/GlobalStyles'
@@ -9,6 +11,7 @@ import styles from '~/styles/Home.module.scss'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     
       <>
@@ -18,9 +21,12 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <Header />
         <main className={styles.main}>
           <div className={styles.description}>
-            <p>
+            {/* <p className= {[styles.desc, styles.colorRed].join(' ')}> */}
+            <p className= { clsx(styles.desc, styles.colorRed, styles.textUppercase) }>
+            {/* <p className= {`${styles.desc} ${styles.colorRed}`}> */}
               Get started by editing&nbsp;
               <code className={styles.code}>src/pages/index.js</code>
             </p>
